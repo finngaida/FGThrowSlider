@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  FGThrowSlider.h
 //  Throw Slider Control Demo
 //
 //  Created by Finn Gaida on 15.02.14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController {
-    UIDynamicAnimator *animator;
-}
+@interface FGThrowSlider : UIView
 
 @end
