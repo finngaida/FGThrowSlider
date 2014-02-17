@@ -11,3 +11,5 @@ and recieve updates at:
   `- (void)slider:(FGThrowSlider *)slider changedValue:(CGFloat)value`
   
 Feel free to use it in your projects and let me know of any ideas, requests, stuff.
+
+![alt tag](https://raw.github.com/finngaida/fgthrowslider/master/demo.gif)
