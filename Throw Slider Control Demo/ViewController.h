@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FGThrowSlider.h"
 
-@interface ViewController : UIViewController {
-    UIDynamicAnimator *animator;
-}
+@interface ViewController : UIViewController <FGThrowSliderDelegate> 
 
 @end

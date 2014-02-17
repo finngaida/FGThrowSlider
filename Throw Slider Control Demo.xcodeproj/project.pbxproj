@@ -16,22 +16,8 @@
 		CC7D8BD418AFC6E900B6BE51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7D8BD218AFC6E900B6BE51 /* Main.storyboard */; };
 		CC7D8BD718AFC6E900B6BE51 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7D8BD618AFC6E900B6BE51 /* ViewController.m */; };
 		CC7D8BD918AFC6E900B6BE51 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC7D8BD818AFC6E900B6BE51 /* Images.xcassets */; };
-		CC7D8BE018AFC6E900B6BE51 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC7D8BDF18AFC6E900B6BE51 /* XCTest.framework */; };
-		CC7D8BE118AFC6E900B6BE51 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC7D8BC018AFC6E900B6BE51 /* Foundation.framework */; };
-		CC7D8BE218AFC6E900B6BE51 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC7D8BC418AFC6E900B6BE51 /* UIKit.framework */; };
-		CC7D8BEA18AFC6E900B6BE51 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC7D8BE818AFC6E900B6BE51 /* InfoPlist.strings */; };
-		CC7D8BEC18AFC6E900B6BE51 /* Throw_Slider_Control_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7D8BEB18AFC6E900B6BE51 /* Throw_Slider_Control_DemoTests.m */; };
+		CC7D8BFA18AFDED900B6BE51 /* FGThrowSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7D8BF918AFDED900B6BE51 /* FGThrowSlider.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		CC7D8BE318AFC6E900B6BE51 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CC7D8BB518AFC6E900B6BE51 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CC7D8BBC18AFC6E900B6BE51;
-			remoteInfo = "Throw Slider Control Demo";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		CC7D8BBD18AFC6E900B6BE51 /* Throw Slider Control Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Throw Slider Control Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,11 +34,9 @@
 		CC7D8BD518AFC6E900B6BE51 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		CC7D8BD618AFC6E900B6BE51 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CC7D8BD818AFC6E900B6BE51 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		CC7D8BDE18AFC6E900B6BE51 /* Throw Slider Control DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Throw Slider Control DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC7D8BDF18AFC6E900B6BE51 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		CC7D8BE718AFC6E900B6BE51 /* Throw Slider Control DemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Throw Slider Control DemoTests-Info.plist"; sourceTree = "<group>"; };
-		CC7D8BE918AFC6E900B6BE51 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CC7D8BEB18AFC6E900B6BE51 /* Throw_Slider_Control_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Throw_Slider_Control_DemoTests.m; sourceTree = "<group>"; };
+		CC7D8BF818AFDED900B6BE51 /* FGThrowSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGThrowSlider.h; sourceTree = SOURCE_ROOT; };
+		CC7D8BF918AFDED900B6BE51 /* FGThrowSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGThrowSlider.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,16 +50,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CC7D8BDB18AFC6E900B6BE51 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CC7D8BE018AFC6E900B6BE51 /* XCTest.framework in Frameworks */,
-				CC7D8BE218AFC6E900B6BE51 /* UIKit.framework in Frameworks */,
-				CC7D8BE118AFC6E900B6BE51 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -83,7 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				CC7D8BC618AFC6E900B6BE51 /* Throw Slider Control Demo */,
-				CC7D8BE518AFC6E900B6BE51 /* Throw Slider Control DemoTests */,
 				CC7D8BBF18AFC6E900B6BE51 /* Frameworks */,
 				CC7D8BBE18AFC6E900B6BE51 /* Products */,
 			);
@@ -93,7 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				CC7D8BBD18AFC6E900B6BE51 /* Throw Slider Control Demo.app */,
-				CC7D8BDE18AFC6E900B6BE51 /* Throw Slider Control DemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,6 +89,8 @@
 				CC7D8BD218AFC6E900B6BE51 /* Main.storyboard */,
 				CC7D8BD518AFC6E900B6BE51 /* ViewController.h */,
 				CC7D8BD618AFC6E900B6BE51 /* ViewController.m */,
+				CC7D8BF818AFDED900B6BE51 /* FGThrowSlider.h */,
+				CC7D8BF918AFDED900B6BE51 /* FGThrowSlider.m */,
 				CC7D8BD818AFC6E900B6BE51 /* Images.xcassets */,
 				CC7D8BC718AFC6E900B6BE51 /* Supporting Files */,
 			);
@@ -130,24 +104,6 @@
 				CC7D8BC918AFC6E900B6BE51 /* InfoPlist.strings */,
 				CC7D8BCC18AFC6E900B6BE51 /* main.m */,
 				CC7D8BCE18AFC6E900B6BE51 /* Throw Slider Control Demo-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		CC7D8BE518AFC6E900B6BE51 /* Throw Slider Control DemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				CC7D8BEB18AFC6E900B6BE51 /* Throw_Slider_Control_DemoTests.m */,
-				CC7D8BE618AFC6E900B6BE51 /* Supporting Files */,
-			);
-			path = "Throw Slider Control DemoTests";
-			sourceTree = "<group>";
-		};
-		CC7D8BE618AFC6E900B6BE51 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				CC7D8BE718AFC6E900B6BE51 /* Throw Slider Control DemoTests-Info.plist */,
-				CC7D8BE818AFC6E900B6BE51 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -172,24 +128,6 @@
 			productReference = CC7D8BBD18AFC6E900B6BE51 /* Throw Slider Control Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CC7D8BDD18AFC6E900B6BE51 /* Throw Slider Control DemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CC7D8BF218AFC6E900B6BE51 /* Build configuration list for PBXNativeTarget "Throw Slider Control DemoTests" */;
-			buildPhases = (
-				CC7D8BDA18AFC6E900B6BE51 /* Sources */,
-				CC7D8BDB18AFC6E900B6BE51 /* Frameworks */,
-				CC7D8BDC18AFC6E900B6BE51 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CC7D8BE418AFC6E900B6BE51 /* PBXTargetDependency */,
-			);
-			name = "Throw Slider Control DemoTests";
-			productName = "Throw Slider Control DemoTests";
-			productReference = CC7D8BDE18AFC6E900B6BE51 /* Throw Slider Control DemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -198,11 +136,6 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Finn Gaida";
-				TargetAttributes = {
-					CC7D8BDD18AFC6E900B6BE51 = {
-						TestTargetID = CC7D8BBC18AFC6E900B6BE51;
-					};
-				};
 			};
 			buildConfigurationList = CC7D8BB818AFC6E900B6BE51 /* Build configuration list for PBXProject "Throw Slider Control Demo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -218,7 +151,6 @@
 			projectRoot = "";
 			targets = (
 				CC7D8BBC18AFC6E900B6BE51 /* Throw Slider Control Demo */,
-				CC7D8BDD18AFC6E900B6BE51 /* Throw Slider Control DemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -234,14 +166,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CC7D8BDC18AFC6E900B6BE51 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CC7D8BEA18AFC6E900B6BE51 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -251,27 +175,12 @@
 			files = (
 				CC7D8BD718AFC6E900B6BE51 /* ViewController.m in Sources */,
 				CC7D8BD118AFC6E900B6BE51 /* AppDelegate.m in Sources */,
+				CC7D8BFA18AFDED900B6BE51 /* FGThrowSlider.m in Sources */,
 				CC7D8BCD18AFC6E900B6BE51 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CC7D8BDA18AFC6E900B6BE51 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CC7D8BEC18AFC6E900B6BE51 /* Throw_Slider_Control_DemoTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		CC7D8BE418AFC6E900B6BE51 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CC7D8BBC18AFC6E900B6BE51 /* Throw Slider Control Demo */;
-			targetProxy = CC7D8BE318AFC6E900B6BE51 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CC7D8BC918AFC6E900B6BE51 /* InfoPlist.strings */ = {
@@ -288,14 +197,6 @@
 				CC7D8BD318AFC6E900B6BE51 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		CC7D8BE818AFC6E900B6BE51 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CC7D8BE918AFC6E900B6BE51 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -399,48 +300,6 @@
 			};
 			name = Release;
 		};
-		CC7D8BF318AFC6E900B6BE51 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Throw Slider Control Demo.app/Throw Slider Control Demo";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Throw Slider Control Demo/Throw Slider Control Demo-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Throw Slider Control DemoTests/Throw Slider Control DemoTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		CC7D8BF418AFC6E900B6BE51 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Throw Slider Control Demo.app/Throw Slider Control Demo";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Throw Slider Control Demo/Throw Slider Control Demo-Prefix.pch";
-				INFOPLIST_FILE = "Throw Slider Control DemoTests/Throw Slider Control DemoTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -458,14 +317,6 @@
 			buildConfigurations = (
 				CC7D8BF018AFC6E900B6BE51 /* Debug */,
 				CC7D8BF118AFC6E900B6BE51 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		CC7D8BF218AFC6E900B6BE51 /* Build configuration list for PBXNativeTarget "Throw Slider Control DemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CC7D8BF318AFC6E900B6BE51 /* Debug */,
-				CC7D8BF418AFC6E900B6BE51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
