@@ -31,9 +31,9 @@
     
     FGThrowSlider *slide = [FGThrowSlider sliderWithFrame:CGRectMake(50, 250, 200, 50)
                                                  delegate:self
-                                                leftTrack: // insert UIImage for left track
-                                               rightTrack: // insert UIImage for right track
-                                                    thumb: // insert UIImage for thumb image
+                                                leftTrack:nil // insert UIImage for left track
+                                               rightTrack:nil // insert UIImage for right track
+                                                    thumb:nil // insert UIImage for thumb image
                             ];
     [self.view addSubview:slide];
 
