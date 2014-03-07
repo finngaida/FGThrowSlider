@@ -23,15 +23,21 @@
     return [[FGThrowSlider alloc] initWithFrame:frame andDelegate:del];
 }
 
++ (FGThrowSlider *)sliderWithFrame:(CGRect)frame delegate:(id <FGThrowSliderDelegate>)del leftTrack:(UIImage *)leftImage rightTrack:(UIImage *)rightImage thumb:(UIImage *)thumbImage {
+    return [[FGThrowSlider alloc] initWithFrame:frame
+                                       delegate:del
+                                      leftTrack:leftImage
+                                     rightTrack:rightImage
+                                          thumb:thumbImage];
+}
+
 - (id)initWithFrame:(CGRect)frame {
     return [[FGThrowSlider alloc] initWithFrame:frame andDelegate:nil];
 }
 
 - (instancetype)initWithFrame:(CGRect)frame andDelegate:(id <FGThrowSliderDelegate>)del {
-    
     self = [super initWithFrame:frame];
     if (self) {
-        
         if (NSClassFromString(@"UIDynamicAnimator")) {
             animator = [[UIDynamicAnimator alloc] initWithReferenceView:self];
         }
@@ -60,13 +66,45 @@
         
         UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
         [self addGestureRecognizer:pan];
-        
     }
-    
     return self;
-    
 }
 
+- (instancetype)initWithFrame:(CGRect)frame delegate:(id<FGThrowSliderDelegate>)del leftTrack:(UIImage *)leftImage rightTrack:(UIImage *)rightImage thumb:(UIImage *)thumbImage {
+    self = [super initWithFrame:frame];
+    if (self) {
+        if (NSClassFromString(@"UIDynamicAnimator")) {
+            animator = [[UIDynamicAnimator alloc] initWithReferenceView:self];
+        }
+        
+        // args
+        _delegate = del;
+        valid = NO;
+        
+        // bg
+        CGFloat xmargin = (_leftImage) ? 20 : 0;
+        CGFloat width = (_rightImage) ? self.frame.size.width-xmargin-20 : self.frame.size.width-xmargin;
+        base = [[UIView alloc] initWithFrame:CGRectMake(xmargin, self.frame.size.height/2-1, width, 2)];
+        base.backgroundColor = [UIColor colorWithPatternImage:rightImage];
+        [self addSubview:base];
+        
+        highlight = [[UIView alloc] initWithFrame:CGRectMake(0, base.frame.origin.y, self.frame.size.width/2, 2)];
+        highlight.backgroundColor = [UIColor colorWithPatternImage:leftImage];
+        [self addSubview:highlight];
+        
+        // dragger setup
+        knob = [[UIView alloc] initWithFrame:CGRectMake(0, 0, thumbImage.size.width, thumbImage.size.height)];
+        knob.center = CGPointMake(frame.size.width/2, frame.size.height/2);
+        knob.backgroundColor = [UIColor colorWithPatternImage:thumbImage];
+//        knob.layer.masksToBounds = YES;
+//        knob.layer.cornerRadius = knob.frame.size.width/2;
+        [self addSubview:knob];
+        
+        UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
+        [self addGestureRecognizer:pan];
+    }
+    return self;
+}
 
 #pragma mark callbacks
 
@@ -76,9 +114,9 @@
         case UIGestureRecognizerStateBegan: {
             
             // check if the drag starts inside the tolerance zone
-            if ([pan locationInView:self].x>knob.frame.origin.x-30 && [pan locationInView:self].x<knob.frame.origin.x+80) {
+            if ([pan locationInView:self].x > knob.frame.origin.x - 30 && [pan locationInView:self].x < knob.frame.origin.x + 80) {
                 valid = YES;
-                startVal = [pan locationInView:self].x-knob.center.x;
+                startVal = [pan locationInView:self].x - knob.center.x;
             } else {
                 valid = NO;
             }
@@ -132,9 +170,9 @@
 
 - (void)fadeOut:(UIView *)view from:(CGFloat)from velocity:(CGFloat)velocity amplifier:(CGFloat)amplifier {
     
-    CGFloat perOne = velocity/500;
+    CGFloat perOne = velocity / 500;
     
-    CGFloat calculatedFinalPosition = from+amplifier*perOne;
+    CGFloat calculatedFinalPosition = from + amplifier * perOne;
     
     CGFloat factor = perOne*2;
     
@@ -169,7 +207,7 @@
             }];
         }];
         
-    } else if (calculatedFinalPosition > self.frame.size.width-10) {
+    } else if (calculatedFinalPosition > self.frame.size.width - 10) {
         
         [UIView animateWithDuration:.15 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
             view.center = CGPointMake(self.frame.size.width, view.center.y);

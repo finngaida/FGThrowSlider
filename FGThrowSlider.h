@@ -18,7 +18,10 @@
 @interface FGThrowSlider : UIControl
 
 + (FGThrowSlider *)sliderWithFrame:(CGRect)frame andDelegate:(id <FGThrowSliderDelegate>)del;
++ (FGThrowSlider *)sliderWithFrame:(CGRect)frame delegate:(id <FGThrowSliderDelegate>)del leftTrack:(UIImage *)leftImage rightTrack:(UIImage *)rightImage thumb:(UIImage *)thumbImage;
+
 - (instancetype)initWithFrame:(CGRect)frame andDelegate:(id <FGThrowSliderDelegate>)del;
+- (instancetype)initWithFrame:(CGRect)frame delegate:(id<FGThrowSliderDelegate>)del leftTrack:(UIImage *)leftImage rightTrack:(UIImage *)rightImage thumb:(UIImage *)thumbImage;
 
 @property (nonatomic) BOOL usesPanGestureRecognizer;
 @property (nonatomic) CGFloat value;
