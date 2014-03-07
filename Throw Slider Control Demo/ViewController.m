@@ -26,7 +26,15 @@
     two.backgroundColor = [UIColor redColor];
     [self.view addSubview:two];
     
-    FGThrowSlider *slide = [FGThrowSlider sliderWithFrame:CGRectMake(50, 250, 200, 50) andDelegate:self];
+    FGThrowSlider *slid = [FGThrowSlider sliderWithFrame:CGRectMake(50, 200, 200, 50) andDelegate:self];
+    [self.view addSubview:slid];
+    
+    FGThrowSlider *slide = [FGThrowSlider sliderWithFrame:CGRectMake(50, 250, 200, 50)
+                                                 delegate:self
+                                                leftTrack: // insert UIImage for left track
+                                               rightTrack: // insert UIImage for right track
+                                                    thumb: // insert UIImage for thumb image
+                            ];
     [self.view addSubview:slide];
 
     UISlider *slider = [[UISlider alloc] initWithFrame:CGRectMake(50, 300, 200, 50)];
@@ -36,13 +44,15 @@
 }
 
 - (void)s:(UISlider *)s {
-    two.center = CGPointMake(290, 50+s.value*100);
+    two.center = CGPointMake(290, 50 + s.value * 100);
 }
 
 - (void)slider:(FGThrowSlider *)slider changedValue:(CGFloat)value {
-    one.center = CGPointMake(30, 50+slider.value*100);
+    one.center = CGPointMake(30, 50 + slider.value * 100);
 }
 
-- (void)didReceiveMemoryWarning {[super didReceiveMemoryWarning];}
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
 
 @end
